@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        let count=0;
+        function inc()
+        {
+            count++;
+            document.getElementById("counter").innerHTML=count;
+        }
+        function reset()
+        {
+            count=0;
+            document.getElementById("counter").innerHTML=count;
+        }
+        function dec()
+        {
+            count--;
+            document.getElementById("counter").innerHTML=count;
+        }  
+    </script>
+    
+    <style>
+        .card{
+            width: 350px;
+            height: 500px;
+            box-shadow: 0px 0px 3px 5px black;
+            border-radius: 15px;
+            padding: 10px;
+            background-image: url('./img/background.png');
+            background-size: 130%;
+        }
+        .card-img-container{
+            color: white;
+            margin: auto;
+            box-shadow: 0px 0px 3px #808080;
+            width: 170px;
+            height: 170px;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        .card-img{
+            height: 150px;
+            width: 150px;
+            background-color:red;
+            display: inline-block;
+            justify-content: space-between;
+            margin-left: 10px;
+            margin-top: 10px;
+            color: white;
+            font-size:20px;
+        }
+    .img{
+        height: 15px;  
+    } 
+    .para{
+        margin-left: 30px;
+    }
+    .card-price-tag{
+        text-align: center;
+        height: 20px;
+        width: 100px;
+        background-color: yellow;
+        display: block;
+        padding: 2px;
+        font-size: 17px;
+        border-radius: 20px;
+        border: 2px solid black;
+        border-color: red;
+        position: absolute;
+        margin-left: 15px;
+    }
+    .card-price-tag:hover{
+        background-color: aqua;
+    }
+    .card-img-container:hover{
+        background-color: aqua;
+    }
+    .card-price-tag-parent{
+        position: relative;
+    }
+    .card-title{
+        text-align: center;
+        font-size: 25px;
+        color: red;
+    }
+    .buy-button-container{
+        position: relative;
+        top: 1px;
+        text-align: center;
+        margin-left: 30px;
+    }
+    .btn-buy-now{
+        background-color: yellow;
+        border: 2px solid black;
+        border-color: red;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 18px;
+        width: 100px;
+
+        
+    }
+    .btn-buy-now:hover{
+        background-color: tomato;
+    }
+    .btn{
+        font-size: 20px;
+        border-radius: 5px;
+        border-color:grey;
+        background-color:red;
+        margin-right: 40px;
+        justify-content:space-evenly;
+
+    }
+    </style>
+</head>
+<body>
+<div>
+   
+    <div class="card">
+        <div class="card-img-container">
+            <img class="card-img" src="./img/diwali-product-img.png" alt="card-img"/>
+        </div>
+        <h2 class="card-title">Akash-diya</h2>
+        <p class="para" style="color:red" >Lantern Type: Hanging Lantern.
+            Material: ABS Plastic. 
+            Style: Handmade. 
+            Color: Multi.
+            Size: Small.
+            Brand: Yug.</p>
+
+            <span class="card-price-tag">only at ₹500/-</span>
+            <div class="buy-button-container">
+    
+            <button class="btn-buy-now">Buy Now</button><br><br>
+
+            <button class="btn" onClick="inc()"><img class="img" src="./img/plus.png"></button>
+            <button class="btn" onClick="inc()" id="counter">1</button>
+           
+            <button class="btn" onClick="dec()"><img class="img" src="./img/minus.png"></button>
+
+            </div>
+        </div>
+           
+        </div>
+    
+    
+    
+</body>
+</html>
